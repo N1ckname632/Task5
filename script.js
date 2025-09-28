@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
         $('#result').text('Отправка запроса на сервер...');
         
         $.ajax({
-            //url:'http://127.0.0.1',
-            url:'https://httpbin.org/post',
+            url:'http://127.0.0.1',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
         try {
-            const response = await fetch('/phpscript/api/save-user', {
+            const response = await fetch('/api/save-user', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -132,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
         try {
-            const response = await fetch('/phpscript/api/save-review', {
+            const response = await fetch('/api/save-review', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -163,4 +162,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('createNewReview').addEventListener("click",function(){
         document.getElementById('createReview').classList.remove('hidden');
     })
+
 });
