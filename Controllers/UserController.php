@@ -100,5 +100,66 @@ class UserController extends Controller{
 
         header('Location: /');
     }
+public function apiSaveAction(): void
+    {
+        header('Content-Type: application/json');
+
+        try {
+            $input = json_decode(file_get_contents('php://input'), true);
+
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new \Exception('Ошибка декодирования JSON');
+            }
+
+            $username = htmlspecialchars($input['username'] ?? '');
+            $usersurname = htmlspecialchars($input['usersurname'] ?? '');
+            $email = htmlspecialchars($input['email'] ?? '');
+            $message = htmlspecialchars($input['message'] ?? '');
+
+            if (empty($username) || empty($email)) {
+                throw new \Exception('Поля "Имя" и "Email" обязательны для заполнения');
+            }
+
+            $user = new User();
+            $user->setName($username)
+                ->setSurname($usersurname)
+                ->setEmail($email)
+                ->setMessage($message)
+                ->insert();
+
+            echo json_encode([
+                'success' => true,
+                'message' => 'Пользователь успешно сохранен',
+                'id' => $user->getId()
+            ]);
+        } catch (\Exception $e) {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]);
+        }
+    }
+
+    public function apiListAction(): void
+    {
+        header('Content-Type: application/json');
+        
+        try {
+            $user = new User();
+            $users = $user->findAll();
+            
+            echo json_encode([
+                'success' => true,
+                'data' => $users
+            ]);
+        } catch (\Exception $e) {
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Ошибка при получении пользователей'
+            ]);
+        }
+    }
 }
 ?>
