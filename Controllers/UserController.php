@@ -52,7 +52,7 @@ class UserController extends Controller{
             ->getRecordedUser()
             ->insert();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 
     public function editAction(int $id): void{
@@ -90,7 +90,7 @@ class UserController extends Controller{
             ->setId((int) $_POST['id'])
             ->update();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 
     public function deleteAction(int $id): void{
@@ -98,7 +98,7 @@ class UserController extends Controller{
             ->setId($id)
             ->delete();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 }
 ?>
