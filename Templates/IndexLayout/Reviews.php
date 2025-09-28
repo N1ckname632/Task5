@@ -15,13 +15,14 @@
             <div class="body">
                 <?=$review['comment']?>
             </div>
-            <form method="get" action="/phpscript/review/edit/<?=(int) $review['id']?>">
+            <form method="get" action="/review/edit/<?=(int) $review['id']?>">
                 <button type="submit" class="btnEdit" id="editReview">Редактировать</button>
             </form>
             
-            <form method="post" action="/phpscript/review/delete/<?=(int) $review['id']?>">
+            <form method="post" action="/review/delete/<?=(int) $review['id']?>">
                 <button type="submit" class ="btnDelete">Удалить</button>
             </form>
         </div>
         <?php endforeach; ?>
+
     </div>
