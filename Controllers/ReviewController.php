@@ -53,7 +53,7 @@ class ReviewController extends Controller{
             ->getRecordedReview()
             ->insert();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 
     public function updateAction(): void{
@@ -62,7 +62,7 @@ class ReviewController extends Controller{
             ->setId((int) $_POST['id'])
             ->update();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 
     public function deleteAction(int $id): void{
@@ -71,7 +71,7 @@ class ReviewController extends Controller{
             ->setId($id)
             ->delete();
 
-        header('Location: /phpscript/');
+        header('Location: /');
     }
 
     public function addAction(): string{
@@ -79,15 +79,7 @@ class ReviewController extends Controller{
             $this->addLayout() .
             $this->footer();
     }
-
-    protected function addLayout(): string{
-        return $this->getAddForm();
-    }
-
-    protected function getAddForm(): string{
-        return $this->template('Template/ReviewLayout/AddForm.php');
-    }
-
+    
     public function getId(): int{
         return $this->id;
     }
