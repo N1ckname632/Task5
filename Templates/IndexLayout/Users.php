@@ -11,14 +11,15 @@
                 <?=$user['email']?>
             </div>
             
-            <form method="get" action="/phpscript/user/edit/<?=(int) $user['id']?>">
+            <form method="get" action="/user/edit/<?=(int) $user['id']?>">
                 <button type="submit" class="btnEdit" id="editUser">Редактировать</button>
             </form>
             
-            <form method="post" action="/phpscript/user/delete/<?=(int) $user['id']?>">
+            <form method="post" action="/user/delete/<?=(int) $user['id']?>">
                 <button type="submit" class ="btnDelete">Удалить</button>
             </form>
         </div>
 
         <?php endforeach; ?>
+
     </div>
