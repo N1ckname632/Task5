@@ -32,40 +32,8 @@ class Router{
         [self::CONTROLLER =>'Review', self::ACTION => 'add', self::PATH => "/review/add", self::METHOD => self::METHOD_ANY],
         [self::CONTROLLER =>'Api', self::ACTION => 'saveUser', self::PATH => "/api/save-user", self::METHOD => self::METHOD_POST],
         [self::CONTROLLER =>'Api', self::ACTION => 'saveReview', self::PATH => "/api/save-review", self::METHOD => self::METHOD_POST],
-
-
-
-
-
-    [self::CONTROLLER =>'Index', self::ACTION => 'index', self::PATH => "/phpscript/", self::METHOD => self::METHOD_ANY],
-    [self::CONTROLLER =>'User', self::ACTION => 'insert', self::PATH => "/phpscript/user/insert", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'User', self::ACTION => 'edit', self::PATH => "/phpscript/user/edit/{id}", self::METHOD => self::METHOD_GET],
-    [self::CONTROLLER =>'User', self::ACTION => 'update', self::PATH => "/phpscript/user/update", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'User', self::ACTION => 'delete', self::PATH => "/phpscript/user/delete/{id}", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'Review', self::ACTION => 'edit', self::PATH => "/phpscript/review/edit/{id}", self::METHOD => self::METHOD_GET],
-    [self::CONTROLLER =>'Review', self::ACTION => 'update', self::PATH => "/phpscript/review/update", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'Review', self::ACTION => 'insert', self::PATH => "/phpscript/review/insert", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'Review', self::ACTION => 'delete', self::PATH => "/phpscript/review/delete/{id}", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'Review', self::ACTION => 'add', self::PATH => "/phpscript/review/add", self::METHOD => self::METHOD_ANY],
-    [self::CONTROLLER =>'Api', self::ACTION => 'saveUser', self::PATH => "/phpscript/api/save-user", self::METHOD => self::METHOD_POST],
-    [self::CONTROLLER =>'Api', self::ACTION => 'saveReview', self::PATH => "/phpscript/api/save-review", self::METHOD => self::METHOD_POST],
     ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    
         private $path;
 
         private $route;
@@ -132,4 +100,5 @@ class Router{
             return $this->route;
         }
     }
+
 ?>
