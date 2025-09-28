@@ -1,0 +1,122 @@
+.form-section{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 4%;
+    margin-bottom:4%;
+    padding-left: 1%;
+    padding-right: 0.5px;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border: 1px solid lightgray; 
+    border-radius: 6px;
+    width: 35%;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+label{
+    font-family: 'Times New Roman';
+    font-size:14px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    width:96.1%;
+    height:30px;
+    border-radius:6px;
+    cursor: pointer;
+}
+
+h2{
+    margin-left: 38%;
+    margin-right: 40%;
+    font-size: 25px;
+}
+
+.delivery-info{
+    color: lightgray;
+}
+
+textarea.form-control{
+    width:95%;
+    border-radius: 5px ;
+    border-color:lightgray;
+}
+
+input.form-control {
+    width:95%;
+    height:20px;
+    border-radius: 5px;
+    border-color:lightgray;
+} 
+
+.form-control:invalid{
+    border-radius: 5px;
+    border-color: red;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 13px; 
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 5px; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.body{
+    line-height: 1.5;
+    color: #555;
+}
+
+.text{
+    margin-left: 32%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.btnDelete{
+    background-color: red;
+    color: white;
+    width:96.1%;
+    height:30px;
+    border-radius:6px;
+    cursor: pointer;
+}
+
+.btnEdit{
+    background-color: blue;
+    color: white;
+    width:96.1%;
+    height:30px;
+    border-radius:6px;
+    cursor: pointer;
+}
